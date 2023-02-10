@@ -11,31 +11,13 @@
 </head>
 
 <body>
-
-    <div class="m-5 flex-column justify-space-around">
-        <header class="display-flex justify-space-between">
-            <ul class="nav nav-tabs justify-content-end">
-                <li class="nav-item">
-
-                    <a class="nav-link active" href="#">
-                        <img src="analysis.png" id="icon" />
-                        <span>OVERVIEW</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <img src="accounts.png" id="icon" />
-                        <span>CHECKBOOK</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <img src="objective.png" id="icon" />
-                        <span>GOALS</span>
-                    </a>
-                </li>
-            </ul>
-        </header>
-    </div>
-
+          <nav>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a href="/profile">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      </nav>
 </body>
