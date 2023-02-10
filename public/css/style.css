@@ -1,0 +1,16 @@
+a,
+span {
+    font-weight: bold;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.nav-item:hover {
+    background-color: #06D6A0;
+    color: white;
+}
+
+#icon {
+    width: 30px;
+    height: 30px;
+}
