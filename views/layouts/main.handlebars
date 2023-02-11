@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Planner</title>
+    <title>Budgit Home</title>
     <link rel="stylesheet" href="/css/jass.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -20,11 +20,8 @@
 
             <section class="card-body">
                 <img src="https://via.placeholder.com/150" />
-                <h1 class="card-title">Financial Planner</h1>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec libero
-                    molestie, vestibulum
-                    nisl
-                    et, volutpat orci. Nunc non finibus mauris.</p>
+                <h1 class="card-title">BudgitBuddy</h1>
+                <p class="card-text">A financial planner that's built with you in mind.</p>
             </section>
 
             <form class="">
@@ -37,15 +34,15 @@
                     <div class="tab-content">
                         <div id="logIn" class="tab-pane fade in active">
                             <h3>LOG IN</h3>
-                            <input class="row" placeholder="Email">
-                            <input class="row" placeholder="Password">
+                            <input class="email-login" placeholder="Email" id="login-email">
+                            <input class="password-login" placeholder="Password" id="login-password">
                             <nav>
                                 <!-- Conditionally render login or logout links -->
                                 {{#if logged_in}}
-                                <a href="/profile">profile</a> |
-                                <button class="no-button" id="logout">logout</button>
+                                <a href="/overview">profile</a> |
+                                <button class="button-fancy" id="logout">logout</button>
                                 {{else}}
-                                <a href="/login">login</a>
+                                <a href="/login">Login</a>
                                 {{/if}}
                             </nav>
                         </div>
@@ -56,12 +53,8 @@
                             <input class="row" placeholder="Password">
                             <nav>
                                 <!-- Conditionally render login or logout links -->
-                                {{#if logged_in}}
-                                <a href="/profile">profile</a> |
-                                <button class="no-button" id="logout">logout</button>
-                                {{else}}
-                                <a href="/login">login</a>
-                                {{/if}}
+                                <a href="/login">Sign Up</a>
+                              
                             </nav>
                         </div>
                     </div>
