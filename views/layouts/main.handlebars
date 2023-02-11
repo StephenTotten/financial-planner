@@ -33,27 +33,29 @@
 
                     <div class="tab-content" id="tab-content1">
                         <div id="logIn" class="tab-pane fade in active">
-                            <h3>LOG IN</h3>
-                            <input class="email-login" placeholder="Email" id="login-email">
-                            <input class="password-login" placeholder="Password" id="login-password">
-                            <nav>
+                            <h3 style="margin: 2rem">LOG IN</h3>
+                            <input class="email-login text-center" placeholder="Email" id="login-email"
+                                style="margin: 1rem">
+                            <input class="password-login text-center" placeholder="Password" id="login-password"
+                                style="margin: 1rem">
+                            <nav style="margin: 2rem">
                                 <!-- Conditionally render login or logout links -->
                                 {{#if logged_in}}
                                 <a href="/overview">profile</a> |
                                 <button class="button-fancy" id="logout">logout</button>
                                 {{else}}
-                                <a href="/login">Login</a>
+                                <a href="/login">LOG IN</a>
                                 {{/if}}
                             </nav>
                         </div>
 
                         <div id="signUp" class="tab-pane fade">
                             <h3 style="margin: 2rem">SIGN UP</h3>
-                            <input placeholder="Email" style="margin: 2rem">
-                            <input placeholder="Password" style="margin: 2rem">
-                            <nav>
+                            <input class="text-center" placeholder="Email" style="margin: 1rem">
+                            <input class="text-center" placeholder="Password" style="margin: 1rem">
+                            <nav style="margin: 2rem">
                                 <!-- Conditionally render login or logout links -->
-                                <a href="/login">Sign Up</a>
+                                <a href="/login">SIGN UP</a>
 
                             </nav>
                         </div>
@@ -62,6 +64,8 @@
             </form>
 
         </div>
+
+
     </main>
 
 

@@ -6,6 +6,32 @@
 }
 
 
+
+#tab-content1 {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 5px 5px 18px lightgrey;
+}
+
+#nav-tabs1 {
+    display: flex;
+    justify-content: end;
+}
+
+.nav>li>a {
+    color: black;
+}
+
+.nav>li>a {
+    background-color: #06D6A0;
+    color: white;
+}
+
+.nav-tabs>li.active>a:hover {
+    background-color: #06D6A0;
+    color: white;
+}
+
 a,
 span {
     font-weight: bold;
