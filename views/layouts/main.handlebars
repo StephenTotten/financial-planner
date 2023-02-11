@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financial Planner</title>
-    <link rel="stylesheet" href="/css/jass.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -15,51 +15,51 @@
 <body>
 
     <main class="container-fluid">
-        <div class="card text-center m-5">
+        <div class="text-center" style="margin: 8rem;">
 
-            <section class="card-body">
-                <img src="https://via.placeholder.com/150" />
+            <section class="card-body" style="margin: 5rem;">
+                <img src="https://via.placeholder.com/150" style="margin: 2rem;" />
                 <h1 class="card-title">Financial Planner</h1>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec libero
-                    molestie, vestibulum
-                    nisl
-                    et, volutpat orci. Nunc non finibus mauris.</p>
+                <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <br> Phasellus nec libero molestie, vestibulum nisl et, volutpat orci. Nunc non finibus mauris.
+                </p>
             </section>
 
-            <form class="">
-                <div class="container" style="width: 40rem">
-                    <ul class=" nav nav-tabs">
+            <form style="margin-top: 8rem;">
+                <div class="container" style="width: 50rem; margin-top: 2rem;">
+                    <ul class=" nav nav-tabs" id="nav-tabs1">
                         <li class=" active justify-content-end"><a data-toggle="tab" href="#logIn">LOG IN</a></li>
                         <li><a data-toggle="tab" href="#signUp">SIGN UP</a></li>
                     </ul>
 
-                    <div class="tab-content">
+                    <div class="tab-content" id="tab-content1">
                         <div id="logIn" class="tab-pane fade in active">
-                            <h3>LOG IN</h3>
-                            <input class="row" placeholder="Email">
-                            <input class="row" placeholder="Password">
+                            <h3 style="margin: 2rem">LOG IN</h3>
+                            <input placeholder="Email" style="margin: 2rem">
+                            <input placeholder="Password" style="margin: 2rem">
                             <nav>
                                 <!-- Conditionally render login or logout links -->
                                 {{#if logged_in}}
                                 <a href="/profile">profile</a> |
                                 <button class="no-button" id="logout">logout</button>
                                 {{else}}
-                                <a href="/login">login</a>
+                                <a class="btn" href="/login">LOG IN</a>
                                 {{/if}}
                             </nav>
                         </div>
 
                         <div id="signUp" class="tab-pane fade">
-                            <h3>SIGN UP</h3>
-                            <input class="row" placeholder="Email">
-                            <input class="row" placeholder="Password">
+                            <h3 style="margin: 2rem">SIGN UP</h3>
+                            <input placeholder="Email" style="margin: 2rem">
+                            <input placeholder="Password" style="margin: 2rem">
                             <nav>
                                 <!-- Conditionally render login or logout links -->
                                 {{#if logged_in}}
                                 <a href="/profile">profile</a> |
-                                <button class="no-button" id="logout">logout</button>
+                                <button class="no-button" id="logout">LOG OUT</button>
                                 {{else}}
-                                <a href="/login">login</a>
+                                <a class="btn" href="/login">SIGN UP</a>
                                 {{/if}}
                             </nav>
                         </div>

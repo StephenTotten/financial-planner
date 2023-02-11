@@ -1,3 +1,11 @@
+:root {
+    --blue: #1B9AAA;
+    --green: #06D6A0;
+    --pink: #EF476F;
+    --yellow: #FFC43D;
+}
+
+
 a,
 span {
     font-weight: bold;
@@ -6,11 +14,40 @@ span {
 }
 
 .nav-item:hover {
-    background-color: #06D6A0;
+    background-color: var(--green);
     color: white;
 }
 
 #icon {
     width: 30px;
     height: 30px;
+}
+
+#tab-content1 {
+    padding: 20px;
+    box-shadow: 5px 10px 18px lightgrey;
+}
+
+#nav-tabs1 {
+    display: flex;
+    justify-content: end;
+}
+
+.nav>li>a {
+    color: black;
+}
+
+.nav>li>a {
+    background-color: #06D6A0;
+    color: white;
+}
+
+.nav-tabs>li.active>a:hover {
+    background-color: #06D6A0;
+    color: white;
+}
+
+.btn {
+    background-color: var(--pink);
+    color: white;
 }
