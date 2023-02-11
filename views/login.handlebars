@@ -1,0 +1,46 @@
+        <div class="card text-center m-5">
+
+            <section class="card-body">
+                <img src="https://via.placeholder.com/150" />
+                <h1 class="card-title">BudgitBuddy</h1>
+                <p class="card-text">A financial planner that's built with you in mind.</p>
+            </section>
+
+            <form class="">
+                <div class="container" style="width: 40rem">
+                    <ul class=" nav nav-tabs">
+                        <li class=" active justify-content-end"><a data-toggle="tab" href="#logIn">LOG IN</a></li>
+                        <li><a data-toggle="tab" href="#signUp">SIGN UP</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="logIn" class="tab-pane fade in active">
+                            <h3>LOG IN</h3>
+                            <input class="email-login" placeholder="Email" id="login-email">
+                            <input class="password-login" placeholder="Password" id="login-password">
+                            <nav>
+                                <!-- Conditionally render login or logout links -->
+                                {{#if logged_in}}
+                                <a href="/overview">profile</a> |
+                                <button class="button-fancy" id="logout">logout</button>
+                                {{else}}
+                                <a href="/login">Login</a>
+                                {{/if}}
+                            </nav>
+                        </div>
+
+                        <div id="signUp" class="tab-pane fade">
+                            <h3>SIGN UP</h3>
+                            <input class="row" placeholder="Email">
+                            <input class="row" placeholder="Password">
+                            <nav>
+                                <!-- Conditionally render login or logout links -->
+                                <a href="/login">Sign Up</a>
+                              
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
