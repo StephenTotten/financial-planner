@@ -6,12 +6,30 @@
 }
 
 
-
 #tab-content1 {
     background-color: white;
     padding: 20px;
     box-shadow: 5px 5px 18px lightgrey;
 }
+
+.nav-tabs {
+    background-color: var(--yellow);
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 12rem;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.nav-tabs:hover,
+.nav-tabs:active {
+    background-color: var(--green);
+    color: white;
+}
+
+
+
+
 
 #nav-tabs1 {
     display: flex;
@@ -23,12 +41,7 @@
 }
 
 .nav>li>a {
-    background-color: #06D6A0;
-    color: white;
-}
-
-.nav-tabs>li.active>a:hover {
-    background-color: #06D6A0;
+    background-color: var(--yellow);
     color: white;
 }
 
@@ -47,7 +60,10 @@ span {
 #icon {
     width: 30px;
     height: 30px;
+    margin-right: 25px;
+
 }
+
 
 #button-fancy {
     --b: 3px;
