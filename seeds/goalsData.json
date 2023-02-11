@@ -1,15 +1,18 @@
 [
     {
       "name": "Playstation 5",
-      "needed_funding": 500
+      "needed_funding": 500,
+      "current_funding": 15
     },
     {
       "name": "New PC",
-      "needed_funding": 1000
+      "needed_funding": 1000,
+      "current_funding": 250
     },
     {
       "name": "Ticket to London",
-      "needed_funding": 800
+      "needed_funding": 800,
+      "current_funding": 0
     }
   ]
   
