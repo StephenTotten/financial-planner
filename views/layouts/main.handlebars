@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Planner</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Budgit Home</title>
+    <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -14,16 +14,14 @@
 
 <body>
 
+
     <main class="container-fluid">
         <div class="text-center" style="margin: 8rem;">
 
-            <section class="card-body" style="margin: 5rem;">
-                <img src="https://via.placeholder.com/150" style="margin: 2rem;" />
-                <h1 class="card-title">Financial Planner</h1>
-                <p class="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    <br> Phasellus nec libero molestie, vestibulum nisl et, volutpat orci. Nunc non finibus mauris.
-                </p>
+            <section class="card-body">
+                <img src="https://via.placeholder.com/150" />
+                <h1 class="card-title">BudgitBuddy</h1>
+                <p class="card-text">A financial planner that's built with you in mind.</p>
             </section>
 
             <form style="margin-top: 8rem;">
@@ -35,16 +33,16 @@
 
                     <div class="tab-content" id="tab-content1">
                         <div id="logIn" class="tab-pane fade in active">
-                            <h3 style="margin: 2rem">LOG IN</h3>
-                            <input placeholder="Email" style="margin: 2rem">
-                            <input placeholder="Password" style="margin: 2rem">
+                            <h3>LOG IN</h3>
+                            <input class="email-login" placeholder="Email" id="login-email">
+                            <input class="password-login" placeholder="Password" id="login-password">
                             <nav>
                                 <!-- Conditionally render login or logout links -->
                                 {{#if logged_in}}
-                                <a href="/profile">profile</a> |
-                                <button class="no-button" id="logout">logout</button>
+                                <a href="/overview">profile</a> |
+                                <button class="button-fancy" id="logout">logout</button>
                                 {{else}}
-                                <a class="btn" href="/login">LOG IN</a>
+                                <a href="/login">Login</a>
                                 {{/if}}
                             </nav>
                         </div>
@@ -55,12 +53,8 @@
                             <input placeholder="Password" style="margin: 2rem">
                             <nav>
                                 <!-- Conditionally render login or logout links -->
-                                {{#if logged_in}}
-                                <a href="/profile">profile</a> |
-                                <button class="no-button" id="logout">LOG OUT</button>
-                                {{else}}
-                                <a class="btn" href="/login">SIGN UP</a>
-                                {{/if}}
+                                <a href="/login">Sign Up</a>
+
                             </nav>
                         </div>
                     </div>
