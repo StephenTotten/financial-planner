@@ -2,11 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budget Buddy</title>
+    <title>Budgit Home</title>
+    <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+    <div class="m-5 flex-column justify-space-around">
+
+        <header class="display-flex justify-space-between">
     
+    
+            <ul class="nav nav-tabs justify-content-end">
+                <li class="nav-item">
+    
+                    <a class="nav-link active" href="#">
+                        <img src="analysis.png" id="icon" />
+                        <span>OVERVIEW</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="accounts.png" id="icon" />
+                        <span>CHECKBOOK</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="objective.png" id="icon" />
+                        <span>GOALS</span>
+                    </a>
+                </li>
+            </ul>
+    
+        </header>
+    
+    </div>
+    <div class="card m-3">
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#overview">OVERVIEW</a></li>
+        <li><a data-toggle="tab" href="#checkbook">CHECKBOOK</a></li>
+        <li><a data-toggle="tab" href="#goals">GOALS</a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="overview" class="tab-pane fade in active">
+          <h3>OVERVIEW</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div id="checkbook" class="tab-pane fade">
+          <h3>Menu 1</h3>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div id="goals" class="tab-pane fade">
+          <h3>Menu 2</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+        </div>
+        <div id="menu3" class="tab-pane fade">
+          <h3>Menu 3</h3>
+          <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="width: 800px;"><canvas id="bigcharts"></canvas></div>
+
+    <!-- <script type="module" src="dimensions.js"></script> -->
+    <script type="module" src="/public/js/bigcharts.js"></script>
+      
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+
 </body>
+
+
 </html>
