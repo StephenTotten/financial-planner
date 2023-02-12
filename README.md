@@ -1,5 +1,46 @@
 # financial-planner
 
+### Budget Buddy - Your Personal Financial Tracker
+Introduction
+Budget Buddy is a simple and efficient financial tracker that helps you keep track of your spending and income. Whether you're a student, a freelancer, or a small business owner, Budget Buddy makes it easy for you to manage your finances in one place. With our user-friendly interface and dynamic features, you can get a clear overview of your financial status and make informed decisions about your finances.
+
+## Key Features
+Easy transaction tracking: Quickly and easily add transactions, categorize them, and see a summary of your spending and income.
+Dynamic data visualization: Budget Buddy displays your transactions in a clear and intuitive way, making it easy to track your finances over time.
+Secure access: Your financial data is protected by authentication and authorization, ensuring that only you have access to your information.
+
+## Technology Stack
+Budget Buddy was built using the following technologies:
+
+HTML
+CSS
+JavaScript
+Handlebars templates
+MySQL
+Sequelize ORM
+Node.js
+Express.js
+Heroku for deployment
+Getting Started
+Getting started with Budget Buddy is simple. All you have to do is sign up, add your transactions, and start tracking your finances. So what are you waiting for? Get started today and take control of your finances with Budget Buddy!
+
+## Contributing
+We welcome contributions to Budget Buddy. If you have any ideas or suggestions for new features or bug fixes, please feel free to open an issue or submit a pull request.
+
+License
+Budget Buddy is licensed under the [_______Insert License Here].
+
+Contact
+For any questions or concerns, please contact [__________,Insert Contact Information Here].
+
+## Elevator pitch:
+
+ "Think managing your finances is about as fun as a root canal? Say hello to Budget Buddy, your financial sidekick who's got your back. Whether you're a student, freelancer, or small business owner, with Budget Buddy, you can view all your transactions in one place, categorize them, and gain a clear understanding of your financial situation.
+
+Say goodbye to messy bank statements and complicated spreadsheets. With a user-friendly interface that's easier to navigate than a Tinder profile and fun features that make saving feel like a game, you'll be the boss of your finances in no time. So go ahead, treat yourself to that latte without a second thought. Budget Buddy's got you covered.
+
+Budget Buddy isn't just a simple budgeting app. It's a powerful financial tool that helps you understand your spending habits and make positive changes to improve your financial state."
+
 ## Acceptance Criteria
 
 WHEN I visit the site for the first time
@@ -94,3 +135,107 @@ WHEN I am idle on the site for more than a [_________, set time
 * It's done when the code is organized using MVC architecture.
 
 * It's done when the views are rendered with Handlebars.js templates.
+
+
+## SWOT (Strengths, Weaknesses, Opportunities, and Threats) analysis
+
+# Strengths:
+
+User-friendly interface
+Dynamic data visualization
+Efficient database integration with Sequelize ORM
+Security features for authentication and authorization
+
+# Weaknesses:
+
+Low brand recognition and awareness
+Competition from established financial tracking apps
+Limited marketing and promotional resources
+
+# Opportunities:
+
+Growing demand for financial tracking apps among young adults and college students
+Room for innovation and differentiation in the market
+Potential for partnerships and collaborations in finance and tech industries
+
+# Threats:
+
+Competition from established financial tracking apps
+Technological advancements by competitors
+Changes in finance and tech regulations and policies.
+
+
+## Project Outline 
+
+*  Set up the project structure and create the necessary files, action items, roles for the project, such as index.html, app.js, style.css, and our Handlebars templates.
+
+*  Use HTML, CSS, and JavaScript to create the user interface for the financial tracker. This may include forms for adding transactions, tables or charts for displaying the data, and other UI elements. Use Handlebars templates to dynamically render the information from the database.
+
+*  Integrate a database (MySQL) to store the transactions. Use the Sequelize ORM to interact with the database for structure and efficiency.
+
+*  Use Node.js and Express.js to create the RESTful API for your financial tracker. This will allow us to receive and send data from the client to the server and vice versa.
+
+*  Implement the functionality for adding transactions, categorizing them, and displaying a summary of the spending and income.
+
+*  Add features for authentication and authorization to ensure that only the user has access to their data.
+
+*  Test and debug our app to ensure that it works as expected and fix any issues that arise.
+
+*  Deploy Budget Buddy to Heroku hosting platform, to be accessed by users.
+
+*  Create documentation for Budget Buddy including a README file, to explain how to use it and the technologies that were used to build it.
+
+
+## Process explanation for our budget tracker "Budget Buddy":
+
+# Process:
+The budget tracker project was executed using an agile methodology with daily stand-up meetings and daily retrospectives. The project was divided into three main stages: preparation, development, and deployment.
+
+# Technologies used:
+
+Node.js and Express.js for the back-end API
+Handlebars.js as the templating engine
+MySQL and the Sequelize ORM for the database
+HTML, CSS, and JavaScript for the front-end
+Heroku for deployment
+GIT Hub for Repo, breakdown of tasks and roles:
+
+# Project Preparation:
+
+Defined the project scope and MVP, set up development environment and tools, and created the project repository and issue tracking using GIT Project tool. The team lead _____Stephen Totten was responsible for this stage.
+
+Database Design: Designed the database schema and implemented the database models and migrations. The database specialist _______ was responsible for this stage.
+
+
+Back-end Development: Developed the RESTful API, implemented CRUD operations for goals and expenses, and implemented authentication and sensitive information protection. The back-end developer _______ was responsible for this stage.
+
+
+Front-end Development: Designed and implemented the UI, and tested and refined the front-end functionality. The front-end developers _______ was responsible for this stage.
+
+
+Deployment: Deployed the application to Heroku, tested deployment, and ensured data persistence. The deployment specialist _____ was responsible for this stage.
+
+
+Quality Assurance: Tested and refined the application, and addressed any bugs or performance issues. The QA specialist _____ was responsible for this stage.
+
+Documentation: Wrote the README, documented the code, and documented any remaining tasks or improvements. The documentation specialist _____ was responsible for this stage.
+
+# Challenges:
+
+Integrating the front-end and back-end: The team faced challenges in integrating the front-end and back-end, as the data needed to be passed between the two seamlessly.
+Ensuring responsive design: The team faced challenges in ensuring that the application was responsive and accessible on different screen sizes and devices.
+Successes:
+
+# Completion of MVP: 
+
+The team successfully completed the MVP and delivered a functional budget tracker application.
+User-friendly UI: The team received positive feedback from users about the user-friendly and visually appealing UI.
+
+High performance: The application was tested and performed well, with fast load times and responsive user interactions.
+
+Overall, the budget tracker project was a success and the team learned valuable skills and best practices in building full-stack applications.
+
+
+
+
+
