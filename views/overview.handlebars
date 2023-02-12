@@ -1,70 +1,55 @@
-<div class="m-5 flex-column justify-space-around">
+<header>
+  <div class="" style="margin-top: 20px;">
+    <div class="col d-flex justify-content-end "><button class="tablink nav-tabs" type="button"
+        onclick="openPage('overview')" id="defaultOpen"><img src="analysis.png" id="icon" />OVERVIEW</button>
 
-    <header class="display-flex justify-space-between">
+      <button class="tablink nav-tabs" type="button" onclick="openPage('checkbook')"><img src="accounts.png"
+          id="icon" />CHECKBOOK</button>
 
-
-        <ul class="nav nav-tabs justify-content-end">
-            <li class="nav-item">
-
-                <a class="nav-link active" href="#">
-                    <img src="analysis.png" id="icon" />
-                    <span>OVERVIEW</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="accounts.png" id="icon" />
-                    <span>CHECKBOOK</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <img src="objective.png" id="icon" />
-                    <span>GOALS</span>
-                </a>
-            </li>
-        </ul>
-
-    </header>
-
-</div>
-<div class="card m-3">
-  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#overview">OVERVIEW</a></li>
-    <li><a data-toggle="tab" href="#checkbook">CHECKBOOK</a></li>
-    <li><a data-toggle="tab" href="#goals">GOALS</a></li>
-  </ul>
-  <div class="tab-content">
-    <div id="overview" class="tab-pane fade in active">
-      <h3>OVERVIEW</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div id="checkbook" class="tab-pane fade">
-      <h3>Menu 1</h3>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div id="goals" class="tab-pane fade">
-      <h3>Menu 2</h3>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-    </div>
-    <div id="menu3" class="tab-pane fade">
-      <h3>Menu 3</h3>
-      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+      <button class="tablink nav-tabs" type="button" onclick="openPage('goals')"><img src="objective.png"
+          id="icon" />GOALS</button>
     </div>
   </div>
+</header>
+
+
+
+
+<div id="overview" class="tabcontent text-center mt-5">
+  <h3>OVERVIEW</h3>
+  <p>Let's see your numbers</p>
+  {{!-- add charts here --}}
+</div>
+
+<div id="checkbook" class="tabcontent text-center mt-5">
+  <h3>CHECKBOOK</h3>
+  <p>Would you like to add an income or expense?</p>
+  <button>Income</button>
+  <button>Expense</button>
+</div>
+
+<div id="goals" class="tabcontent text-center mt-5">
+  <h3>GOALS</h3>
+  <p>Set some goals!</p>
+  {{!-- add 3 boxes for adding goal, adding amount/delete and how much $ to go --}}
 </div>
 
 
+<script>
+  function openPage(pageName, elmnt) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
 
+    }
+    document.getElementById(pageName).style.display = "block";
 
+  }
 
-
-
-
-
-
-
-Message Jessica Ortega
-
-
-
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+</script>
