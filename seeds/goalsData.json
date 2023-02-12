@@ -1,15 +1,30 @@
 [
     {
-      "name": "",
+      "name": "Adriana Matthews",
       "needed_funding": 5000
     },
     {
-      "name": "",
+      "name": "Tyler Johnson",
       "needed_funding": 10000
     },
     {
-      "name": "",
+      "name": "Rachel Davis",
       "needed_funding": 800
-    }
+    },
+    {
+        "name": "Miguel Rodriguez",
+        "needed_funding": 200
+      },
+
+      {
+        "name": "Madison Green",
+        "needed_funding": 800
+      },
+
+      {
+        "name": "David Lee",
+        "needed_funding": 725
+      }
   ]
+  
   

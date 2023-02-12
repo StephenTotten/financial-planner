@@ -1,17 +1,28 @@
 [
     {
-      "email": "sal@hotmail.com",
+      "email": "yolo@gmail.com",
       "password": "password12345"
     },
     
     {
-      "email": "lernantino@gmail.com",
+      "email": "super_momma@gmail.com",
       "password": "password12345"
     },
 
     {
-      "email": "amiko2k20@aol.com",
+      "email": "sunshine@gmail.com",
       "password": "password12345"
-    }
+    },
+
+    {
+        "email": "ms_igotthis@gmail.com",
+        "password": "password12345"
+      },
+
+      {
+        "email": "struggle_bus@aol.com",
+        "password": "password12345"
+      }
+    
   ]
 
