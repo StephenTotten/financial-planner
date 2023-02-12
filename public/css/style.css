@@ -12,6 +12,12 @@
     box-shadow: 5px 5px 18px lightgrey;
 }
 
+h1 {
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
 .nav-tabs {
     background-color: var(--yellow);
     color: white;
