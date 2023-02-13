@@ -1,10 +1,15 @@
 // BELOW IS PLACEHOLDER, STILL NEED TO EDIT
 const loginFormHandler = async (event) => {
     event.preventDefault();
+
+    console.log("loginFormHandler");
   
     // Collect values from the login form
-    const email = document.getElementById('.login-email').value.trim();
-    const password = document.getElementById('.login-password').value.trim();
+    const email = document.getElementById('login-email').value.trim();
+    const password = document.getElementById('login-password').value.trim();
+
+    console.log(email);
+    console.log(password);
   
     if (email && password) {
       // Send a POST request to the API endpoint
@@ -16,6 +21,7 @@ const loginFormHandler = async (event) => {
   
       if (response.ok) {
         // If successful, redirect the browser to the overview page
+        console.log("Logged In!");
         document.location.replace('/overview');
       } else {
         alert(response.statusText);
