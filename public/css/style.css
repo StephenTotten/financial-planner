@@ -5,6 +5,12 @@
     --yellow: #FFC43D;
 }
 
+#boxes {
+    box-shadow: 5px 5px 18px lightgrey;
+    width: 50%;
+    margin-top: 50px;
+    padding: 50px;
+}
 
 #tab-content1 {
     background-color: white;
