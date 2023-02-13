@@ -28,6 +28,10 @@ Checkbook.init(
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
+    category: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
