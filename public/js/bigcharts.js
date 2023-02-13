@@ -1,3 +1,5 @@
+
+// EXAMPLE BAR CHART
 import Chart from 'chart.js/auto'
 
 (async function() {
@@ -12,9 +14,9 @@ import Chart from 'chart.js/auto'
   ];
 
   new Chart(
-    document.getElementById('bigcharts'),
+    document.getElementById('doughnut-chart'),
     {
-      type: 'bar',
+      type: 'doughnut',
       data: {
         labels: data.map(row => row.year),
         datasets: [
@@ -26,4 +28,20 @@ import Chart from 'chart.js/auto'
       }
     }
   );
+
+  new Chart(
+    document.getElementById('radar-chart'),
+    {
+      type: 'radar',
+      data: data,
+      options: {
+        elements: {
+          line: {
+            borderWidth: 3
+          }
+        }
+      }
+    }
+  )
 })();
+ 
