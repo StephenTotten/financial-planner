@@ -22,13 +22,13 @@
   <p>Let's see your numbers</p>
 
   {{!-- div for chart.js --}}
-  <div class="container rounded-4" id="boxes">
-    <!-- <div style="width: 500px;"><canvas id="dimensions"></canvas></div><br/> -->
-    <div style="width: 800px;"><canvas id="acquisitions"></canvas></div>
+<div>
+  {{!-- placeholder for doughnut chart --}}
+    <div style="width: 800px;"><canvas id="doughnut-chart"></canvas></div>
+  {{!-- placeholder for radar chart --}}
+    <div style="width: 800px;"><canvas id="radar-chart"></canvas></div>
 
-    <!-- <script type="module" src="dimensions.js"></script> -->
-    <script type="module" src="acquisitions.js"></script>
-  </div>
+</div>
 
 </div>
 
@@ -124,7 +124,6 @@
   </div>
 </div>
 
-
 <script>
   function openPage(pageName, elmnt) {
     var i, tabcontent, tablinks;
@@ -143,3 +142,5 @@
   // Get the element with id="defaultOpen" and click on it
   document.getElementById("defaultOpen").click();
 </script>
+
+<script type="module" src="/js/bigchart.js"></script>

@@ -1,0 +1,17 @@
+[
+    {
+      "description": "Target",
+      "amount": 45,
+      "is_withdrawal": true
+    },
+    {
+      "description": "Einstein Bros",
+      "amount": 15,
+      "is_withdrawal": true
+    },
+    {
+      "description": "Paycheck",
+      "amount": 1300,
+      "is_withdrawal": false
+    }
+  ]
