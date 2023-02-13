@@ -1,4 +1,44 @@
 # financial-planner
+### Budget Buddy - Your Personal Financial Tracker
+Introduction
+Budget Buddy is a simple and efficient financial tracker that helps you keep track of your spending and income. Whether you're a student, a freelancer, or a small business owner, Budget Buddy makes it easy for you to manage your finances in one place. With our user-friendly interface and dynamic features, you can get a clear overview of your financial status and make informed decisions about your finances.
+
+## Key Features
+Easy transaction tracking: Quickly and easily add transactions, categorize them, and see a summary of your spending and income.
+Dynamic data visualization: Budget Buddy displays your transactions in a clear and intuitive way, making it easy to track your finances over time.
+Secure access: Your financial data is protected by authentication and authorization, ensuring that only you have access to your information.
+
+## Technology Stack
+Budget Buddy was built using the following technologies:
+
+HTML
+CSS
+JavaScript
+Handlebars templates
+MySQL
+Sequelize ORM
+Node.js
+Express.js
+Heroku for deployment
+Getting Started
+Getting started with Budget Buddy is simple. All you have to do is sign up, add your transactions, and start tracking your finances. So what are you waiting for? Get started today and take control of your finances with Budget Buddy!
+
+## Contributing
+We welcome contributions to Budget Buddy. If you have any ideas or suggestions for new features or bug fixes, please feel free to open an issue or submit a pull request.
+
+License
+Budget Buddy is licensed under the [_______Insert License Here].
+
+Contact
+For any questions or concerns, please contact [__________,Insert Contact Information Here].
+
+## Elevator pitch:
+
+ "Think managing your finances is about as fun as a root canal? Say hello to Budget Buddy, your financial sidekick who's got your back. Whether you're a student, freelancer, or small business owner, with Budget Buddy, you can view all your transactions in one place, categorize them, and gain a clear understanding of your financial situation.
+
+Say goodbye to messy bank statements and complicated spreadsheets. With a user-friendly interface that's easier to navigate than a Tinder profile and fun features that make saving feel like a game, you'll be the boss of your finances in no time. So go ahead, treat yourself to that latte without a second thought. Budget Buddy's got you covered.
+
+Budget Buddy isn't just a simple budgeting app. It's a powerful financial tool that helps you understand your spending habits and make positive changes to improve your financial state."
 
 ### Budget Buddy - Your Personal Financial Tracker
 Introduction
