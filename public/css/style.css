@@ -1,3 +1,58 @@
+:root {
+    --blue: #1B9AAA;
+    --green: #06D6A0;
+    --pink: #EF476F;
+    --yellow: #FFC43D;
+}
+
+#boxes {
+    box-shadow: 5px 5px 18px lightgrey;
+    width: 50%;
+    margin-top: 50px;
+    padding: 50px;
+}
+
+#tab-content1 {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 5px 5px 18px lightgrey;
+}
+
+h1 {
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.nav-tabs {
+    background-color: var(--yellow);
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 12rem;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.nav-tabs:hover,
+.nav-tabs:active {
+    background-color: var(--green);
+    color: white;
+}
+
+#nav-tabs1 {
+    display: flex;
+    justify-content: end;
+}
+
+.nav>li>a {
+    color: black;
+}
+
+.nav>li>a {
+    background-color: var(--yellow);
+    color: white;
+}
+
 a,
 span {
     font-weight: bold;
@@ -6,11 +61,50 @@ span {
 }
 
 .nav-item:hover {
-    background-color: #06D6A0;
+    background-color: var(--green);
     color: white;
 }
 
 #icon {
     width: 30px;
     height: 30px;
+    margin-right: 25px;
+
+}
+
+
+#button-fancy {
+    --b: 3px;
+    /* border thickness */
+    --s: .45em;
+    /* size of the corner */
+    --color: #373B44;
+
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+        conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 16px;
+
+    border: 0;
+
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+#button-fancy:hover,
+#button-fancy:focus-visible {
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+}
+
+#button-fancy:active {
+    background: var(--color);
+    color: #fff;
 }

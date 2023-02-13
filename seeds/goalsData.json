@@ -1,30 +1,19 @@
 [
     {
-      "name": "Adriana Matthews",
-      "needed_funding": 5000
+      "name": "Playstation 5",
+      "needed_funding": 500,
+      "current_funding": 15
     },
     {
-      "name": "Tyler Johnson",
-      "needed_funding": 10000
+      "name": "New PC",
+      "needed_funding": 1000,
+      "current_funding": 250
     },
     {
-      "name": "Rachel Davis",
-      "needed_funding": 800
-    },
-    {
-        "name": "Miguel Rodriguez",
-        "needed_funding": 200
-      },
-
-      {
-        "name": "Madison Green",
-        "needed_funding": 800
-      },
-
-      {
-        "name": "David Lee",
-        "needed_funding": 725
-      }
+      "name": "Ticket to London",
+      "needed_funding": 800,
+      "current_funding": 0
+    }
   ]
   
   

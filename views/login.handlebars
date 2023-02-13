@@ -1,40 +1,50 @@
-<div class="row justify-space-between-md">
-  <div class="login-card">
-    <h2 class="page-title">Login</h2>
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">Email:</label>
-        <input class="form-input" type="text" id="email-login" />
-      </div>
-      <div class="form-group">
-        <label for="password-login">Password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
-      </div>
-    </form>
-  </div>
-  <div class="login-card">
-    <h2 class="page-title">Signup</h2>
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="username-signup">Username:</label>
-        <input class="form-input" type="text" id="username-signup" />
-      </div>
-      <div class="form-group">
-        <label for="email-signup">Email:</label>
-        <input class="form-input" type="text" id="email-signup" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">Password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
-      </div>
-    </form>
-  </div>
-</div>
+<main class="container-fluid">
+    <div class="text-center" style="margin: 8rem;">
 
-<script src="./js/login.js"></script>
+        <section class="card-body">
+            <img src="../public/assets/logoBB.png" />
+            <h1 class="card-title">BudgitBuddy</h1>
+            <p class="card-text">A financial planner that's built with you in mind.</p>
+        </section>
+
+        <form style="margin-top: 8rem;">
+            <div class="container" style="width: 50rem; margin-top: 2rem;">
+                <ul class=" nav nav-tabs" id="nav-tabs1">
+                    <li class=" active justify-content-end"><a data-toggle="tab" href="#logIn">LOG IN</a></li>
+                    <li><a data-toggle="tab" href="#signUp">SIGN UP</a></li>
+                </ul>
+
+                <div class="tab-content" id="tab-content1">
+                    <div id="logIn" class="tab-pane fade in active">
+                        <h3 style="margin: 2rem">LOG IN</h3>
+                        <input class="email-login text-center" placeholder="Email" id="login-email"
+                            style="margin: 1rem">
+                        <input class="password-login text-center" placeholder="Password" id="login-password"
+                            style="margin: 1rem">
+                        <nav style="margin: 2rem">
+                            <!-- Conditionally render login or logout links -->
+                            {{#if logged_in}}
+                            <a href="/overview">profile</a> |
+                            <button id="button-fancy" id="logout">logout</button>
+                            {{else}}
+                            <a id="button-fancy" href="/overview">Login</a>
+                            {{/if}}
+                        </nav>
+                    </div>
+
+                    <div id="signUp" class="tab-pane fade">
+                        <h3 style="margin: 2rem">SIGN UP</h3>
+                        <input class="text-center" placeholder="Email" style="margin: 1rem">
+                        <input class="text-center" placeholder="Password" style="margin: 1rem">
+                        <nav style="margin: 2rem">
+                            <!-- Conditionally render login or logout links -->
+                            <a id="button-fancy" href="/login">Sign Up</a>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</main>

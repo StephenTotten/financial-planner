@@ -1,2 +1,4 @@
-DROP DATABASE IF EXISTS budget_buddy_db;
-CREATE DATABASE budget_buddy_db;
+
+DROP DATABASE IF EXISTS finance_db;
+CREATE DATABASE finance_db;
+
