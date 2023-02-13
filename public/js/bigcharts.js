@@ -1,5 +1,5 @@
 
-// EXAMPLE BAR CHART
+// dummy data
 import Chart from 'chart.js/auto'
 
 (async function() {
@@ -13,22 +13,30 @@ import Chart from 'chart.js/auto'
     { year: 2016, count: 28 },
   ];
 
+// example doughnut chart
   new Chart(
     document.getElementById('doughnut-chart'),
     {
       type: 'doughnut',
-      data: {
-        labels: data.map(row => row.year),
-        datasets: [
-          {
-            label: 'Acquisitions by year',
-            data: data.map(row => row.count)
-          }
-        ]
-      }
+      labels: [
+        'Green',
+        'Blue',
+        'Yellow'
+      ],
+      datasets: [{
+        label: 'My First Dataset',
+        data: data,
+        backgroundColor: [
+          'rgb(6, 214, 160)',
+          'rgb(27, 154, 170)',
+          'rgb(255, 196, 61)'
+        ],
+        hoverOffset: 4
+      }]
     }
   );
 
+// example radar chart
   new Chart(
     document.getElementById('radar-chart'),
     {

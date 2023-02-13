@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
 
     // Serialize data so the template can read it
     const goals = goalData.map((goal) => goal.get({ plain: true }));
-
+    console.log(goals, 'THIS IS WHERE GOALS WILL APPEAR');
     // Pass serialized data and session flag into template
     res.render('login', { 
       goals, 

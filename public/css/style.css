@@ -130,13 +130,7 @@ span {
 
 
 /* chart styling */
-/* canvas {
-    
-  } */
-  
-.chart-container {
-    position: relative;
-    margin: auto;
-    height: 80vh;
-    width: 80vw;
-  }
+#chart-container {
+    width: 100%;
+    height: auto;
+}
