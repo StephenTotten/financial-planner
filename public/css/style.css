@@ -35,11 +35,11 @@
     box-shadow: 5px 5px 18px lightgrey;
 }
 
-h1 {
+/* h1 {
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-}
+} */
 
 .nav-tabs {
     background-color: var(--yellow);
@@ -89,7 +89,7 @@ span {
 
 }
 
-
+/* button styling */
 #button-fancy {
     --b: 3px;
     /* border thickness */
@@ -127,3 +127,16 @@ span {
     background: var(--green);
     color: #fff;
 }
+
+
+/* chart styling */
+/* canvas {
+    
+  } */
+  
+.chart-container {
+    position: relative;
+    margin: auto;
+    height: 80vh;
+    width: 80vw;
+  }
