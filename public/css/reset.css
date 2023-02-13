@@ -51,11 +51,11 @@ a:not([class]) {
 /* Make images easier to work with */
 img {
   max-width: 100%;
-  display: block;
+  /* display: block; */
 }
 
 /* Natural flow and rhythm in articles by default */
-article > * + * {
+article>*+* {
   margin-top: 1em;
 }
 

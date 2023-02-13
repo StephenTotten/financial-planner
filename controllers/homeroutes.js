@@ -74,9 +74,8 @@ router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/overview');
     return;
-  }
-
+  } else {
   res.render('login');
-});
+}});
 
 module.exports = router;

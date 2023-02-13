@@ -1,50 +1,117 @@
 <main class="container-fluid">
-    <div class="text-center" style="margin: 8rem;">
+  <div class="text-center" style="margin: 4rem;">
 
-        <section class="card-body">
-            <img src="../public/assets/logoBB.png" />
-            <h1 class="card-title">BudgitBuddy</h1>
-            <p class="card-text">A financial planner that's built with you in mind.</p>
-        </section>
 
-        <form style="margin-top: 8rem;">
-            <div class="container" style="width: 50rem; margin-top: 2rem;">
-                <ul class=" nav nav-tabs" id="nav-tabs1">
-                    <li class=" active justify-content-end"><a data-toggle="tab" href="#logIn">LOG IN</a></li>
-                    <li><a data-toggle="tab" href="#signUp">SIGN UP</a></li>
-                </ul>
+    <div class="container mt-5" style="width: 40rem;">
 
-                <div class="tab-content" id="tab-content1">
-                    <div id="logIn" class="tab-pane fade in active">
-                        <h3 style="margin: 2rem">LOG IN</h3>
-                        <input class="email-login text-center" placeholder="Email" id="login-email"
-                            style="margin: 1rem">
-                        <input class="password-login text-center" placeholder="Password" id="login-password"
-                            style="margin: 1rem">
-                        <nav style="margin: 2rem">
-                            <!-- Conditionally render login or logout links -->
-                            {{#if logged_in}}
-                            <a href="/overview">profile</a> |
-                            <button id="button-fancy" id="logout">logout</button>
-                            {{else}}
-                            <a id="button-fancy" href="/overview">Login</a>
-                            {{/if}}
-                        </nav>
-                    </div>
+      <div class="" style="margin-top: 20px;">
+        <div class="col d-flex justify-content-end "><button class="tablink nav-tabs" type="button"
+            onclick="openPage('logIn')" id="defaultOpen">LOGIN</button>
 
-                    <div id="signUp" class="tab-pane fade">
-                        <h3 style="margin: 2rem">SIGN UP</h3>
-                        <input class="text-center" placeholder="Email" style="margin: 1rem">
-                        <input class="text-center" placeholder="Password" style="margin: 1rem">
-                        <nav style="margin: 2rem">
-                            <!-- Conditionally render login or logout links -->
-                            <a id="button-fancy" href="/login">Sign Up</a>
+          <button class="tablink nav-tabs p-0" type="button" onclick="openPage('signUp')">SIGN UP</button>
+        </div>
+      </div>
 
-                        </nav>
-                    </div>
-                </div>
+
+      <div class="tab-content" id="tab-content1">
+        <div id="signUp" class="tabcontent text-center mt-3 mb-3">
+          <h3 class="mb-4">SIGN UP</h3>
+          <form class="signup-form">
+            {{!-- <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" name="name" required />
+            </div> --}}
+            <div class="m-3">
+              {{!-- <label for="email" class="form-label">Email</label> --}}
+              <input type="email" class="form-control text-center" placeholder="Email" id="email" name="email"
+                required />
             </div>
-        </form>
+            <div class="m-3">
+              {{!-- <label for="password" class="form-label">Password</label> --}}
+              <input type="password" class="form-control text-center" placeholder="Password" id="password"
+                name="password" required />
+            </div>
+            <button type="submit" class="btn  mt-3" id="button-fancy">SIGN UP</button>
+          </form>
+        </div>
 
-    </div>
+
+        {{!-- <div class="tab-content" id="tab-content1"> --}}
+          <div id="logIn" class="tabcontent text-center mt-3 mb-3">
+            <h3 class="mb-4">LOGIN</h3>
+            <form class="login-form">
+              <div class="m-3">
+                {{!-- <label for="login-email" class="form-label">Email</label> --}}
+                <input type="email" class="form-control text-center" placeholder="Email" id="login-email" name="email"
+                  required />
+              </div>
+              <div class="m-3">
+                {{!-- <label for="login-password" class="form-label">Password</label> --}}
+                <input type="password" class="form-control text-center" placeholder="Password" id="login-password"
+                  name="password" required />
+              </div>
+              <button type="submit" class="btn mt-3" id="button-fancy">LOGIN</button>
+            </form>
+          </div>
+
+        </div>
+
+        {{!-- <form style="margin-top: 8rem;">
+          <div class="container" style="width: 50rem; margin-top: 2rem;">
+            <ul class=" nav nav-tabs" id="nav-tabs1">
+              <li class=" active justify-content-end"><a data-toggle="tab" href="#logIn">LOG IN</a></li>
+              <li><a data-toggle="tab" href="#signUp">SIGN UP</a></li>
+            </ul>
+
+            <div class="tab-content" id="tab-content1">
+              <div class="login-form" id="logIn" class="tab-pane fade in active">
+                <h3 style="margin: 2rem">LOG IN</h3>
+                <input class="email-login text-center" placeholder="Email" id="login-email" style="margin: 1rem">
+                <input class="password-login text-center" placeholder="Password" id="login-password"
+                  style="margin: 1rem">
+                <nav style="margin: 2rem">
+                  <!-- Conditionally render login or logout links -->
+                  {{#if logged_in}}
+                  <a href="/overview">profile</a> |
+                  <button id="button-fancy" id="logout">logout</button>
+                  {{else}}
+                  <a id="button-fancy" href="/overview">Login</a>
+                  {{/if}}
+                </nav>
+              </div>
+
+              <div id="signUp" class="tab-pane fade">
+                <h3 style="margin: 2rem">SIGN UP</h3>
+                <input class="text-center" placeholder="Email" style="margin: 1rem">
+                <input class="text-center" placeholder="Password" style="margin: 1rem">
+                <nav style="margin: 2rem">
+                  <!-- Conditionally render login or logout links -->
+                  <a id="button-fancy" href="/login">Sign Up</a>
+
+                </nav>
+              </div>
+            </div>
+          </div>
+        </form> --}}
+        <script src="js/login.js"></script>
+      </div>
 </main>
+
+<script>
+  function openPage(pageName, elmnt) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+
+    }
+    document.getElementById(pageName).style.display = "block";
+
+  }
+
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+</script>
