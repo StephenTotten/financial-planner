@@ -7,7 +7,44 @@
             <p class="card-text">A financial planner that's built with you in mind.</p>
         </section>
 
-        <form style="margin-top: 8rem;">
+        <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Sign Up</h2>
+          <form class="signup-form">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" name="name" required />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" required />
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" name="password" required />
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <h2>Login</h2>
+          <form class="login-form">
+            <div class="mb-3">
+              <label for="login-email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="login-email" name="email" required />
+            </div>
+            <div class="mb-3">
+              <label for="login-password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="login-password" name="password" required />
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+        {{!-- <form style="margin-top: 8rem;" >
             <div class="container" style="width: 50rem; margin-top: 2rem;">
                 <ul class=" nav nav-tabs" id="nav-tabs1">
                     <li class=" active justify-content-end"><a data-toggle="tab" href="#logIn">LOG IN</a></li>
@@ -15,7 +52,7 @@
                 </ul>
 
                 <div class="tab-content" id="tab-content1">
-                    <div id="logIn" class="tab-pane fade in active">
+                    <div class="login-form" id="logIn" class="tab-pane fade in active">
                         <h3 style="margin: 2rem">LOG IN</h3>
                         <input class="email-login text-center" placeholder="Email" id="login-email"
                             style="margin: 1rem">
@@ -44,7 +81,7 @@
                     </div>
                 </div>
             </div>
-        </form>
-
+        </form> --}}
+        <script src="js/login.js"></script>
     </div>
 </main>
