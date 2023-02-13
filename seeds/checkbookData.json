@@ -1,0 +1,32 @@
+[
+    {
+      "description": "Target",
+      "amount": 45,
+      "is_withdrawal": true,
+      "category": "Entertainment"
+    },
+    {
+      "description": "Einstein Bros",
+      "amount": 15,
+      "is_withdrawal": true,
+      "category": "Food"
+    },
+    {
+      "description": "Paycheck",
+      "amount": 1300,
+      "is_withdrawal": false,
+      "category": "Other"
+    },
+    {
+      "description": "Xbox",
+      "amount": 60,
+      "is_withdrawal": true,
+      "category": "Entertainment"
+    },
+    {
+      "description": "Water",
+      "amount": 75,
+      "is_withdrawal": true,
+      "category": "Utilities"
+    }
+  ]

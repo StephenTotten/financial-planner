@@ -24,6 +24,14 @@ Checkbook.init(
       type: DataTypes.FLOAT,
       allowNull: false,
     },
+    is_withdrawal: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
+    category: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

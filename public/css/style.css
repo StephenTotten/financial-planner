@@ -5,9 +5,8 @@
     --yellow: #FFC43D;
 }
 
-#background {
-    background-image: url("assets/example.png");
-    background-color: #d6fcf2;
+* {
+    font-family: Tahoma, Helvetica, Arial, sans-serif;
 }
 
 #boxes {
@@ -35,11 +34,6 @@
     box-shadow: 5px 5px 18px lightgrey;
 }
 
-/* h1 {
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-} */
 
 .nav-tabs {
     background-color: var(--yellow);
@@ -98,7 +92,7 @@ span {
     --color: #373B44;
 
     padding: calc(.5em + var(--s)) calc(.9em + var(--s));
-    color: var(--color);
+    color: #0f6aaa;
     font-weight: bold;
     --_p: var(--s);
     background:
@@ -130,7 +124,13 @@ span {
 
 
 /* chart styling */
-#chart-container {
-    width: 100%;
-    height: auto;
+/* canvas {
+    
+  } */
+
+.chart-container {
+    position: relative;
+    margin: auto;
+    height: 80vh;
+    width: 80vw;
 }
