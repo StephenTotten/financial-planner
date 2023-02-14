@@ -14,14 +14,22 @@
     width: 50%;
     margin-top: 50px;
     padding: 50px;
+    background-color: white;
 }
 
+
+#boxes2 {
+    box-shadow: 5px 5px 18px lightgrey;
+    width: 80%;
+    margin-top: 50px;
+    padding: 50px;
+    background-color: white;
+}
 
 .green-btn {
     background-color: var(--green) !important;
     color: white !important;
 }
-
 
 #icon2 {
     width: 50px;
