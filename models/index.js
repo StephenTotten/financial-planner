@@ -11,7 +11,12 @@ Goal.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
+User.hasMany(Checkbook, {
+  foreignKey: 'user_id'
+});
+
 Checkbook.belongsTo(User, {
   foreignKey: 'user_id'
-})
+});
+
 module.exports = { User, Goal, Checkbook };
