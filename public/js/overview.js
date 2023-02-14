@@ -60,40 +60,46 @@ const incomeList = JSON.parse(localStorage.getItem('incomes')) || [];
 const expenseList = JSON.parse(localStorage.getItem('expenses')) || [];
 
 
-function generateTableRow(data) {
-  return `
-    <tr>
-      <td>${data.type}</td>
-      <td>${data.category}</td>
-      <td>${data.description}</td>
-      <td>"$" + ${data.amount}</td>
-     
-    </tr>
-  `;
-}
 
-// Generate HTML table for the combined table
-let table = `
+document.addEventListener('DOMContentLoaded', function () {
+  // code that needs to wait for the DOM to be loaded
+
+  function generateTableRow(data) {
+    return `
+<tr>
+  <td>${data.type}</td>
+  <td>${data.category}</td>
+  <td>${data.description}</td>
+  <td>${data.amount}</td>
+ 
+</tr>
+`;
+  }
+
+  // Generate HTML table for the combined table
+  let table = `
   <table class="table table-hover">
     <thead>
       <tr>
         <th scope="col">Type</th>
         <th scope="col">Category</th>
         <th scope="col">Description</th>
-        <th scope="col">$ Amount</th>
+        <th scope="col">Amount</th>
       </tr>
     </thead>
     <tbody>
-  `;
-incomeList.forEach(income => {
-  table += generateTableRow(income);
-});
-expenseList.forEach(expense => {
-  table += generateTableRow(expense);
-});
-table += `
+      `;
+  incomeList.forEach(income => {
+    table += generateTableRow(income);
+  });
+  expenseList.forEach(expense => {
+    table += generateTableRow(expense);
+  });
+  table += `
     </tbody>
   </table>
-`;
+  `;
 
-document.querySelector('.table-container').innerHTML = table;
+  document.querySelector('.table-container').innerHTML = table;
+
+});
