@@ -2,52 +2,52 @@ const addIncomeBtn = document.querySelector('#addIncome');
 const addExpenseBtn = document.querySelector('#addExpense');
 
 function addIncome() {
-    const amountInput = document.querySelector('#amountCheckbook');
-    const descriptionInput = document.querySelector('#descriptionCheckbook');
-    const categorySelect = document.querySelector('select');
+  const amountInput = document.querySelector('#amountCheckbook');
+  const descriptionInput = document.querySelector('#descriptionCheckbook');
+  const categorySelect = document.querySelector('select');
 
-    const amount = amountInput.value;
-    const description = descriptionInput.value;
-    const category = categorySelect.value;
+  const amount = amountInput.value;
+  const description = descriptionInput.value;
+  const category = categorySelect.value;
 
-    const newIncome = {
-        type: 'income',
-        amount: amount,
-        description: description,
-        category: category
-    };
+  const newIncome = {
+    type: 'income',
+    amount: amount,
+    description: description,
+    category: category
+  };
 
-    // Get list of incomes from localStorage
-    // Add new income to the list
-    // Save the updated income list to localStorage
-    const incomeList = JSON.parse(localStorage.getItem('incomes')) || [];
-    incomeList.push(newIncome);
+  // Get list of incomes from localStorage
+  // Add new income to the list
+  // Save the updated income list to localStorage
+  const incomeList = JSON.parse(localStorage.getItem('incomes')) || [];
+  incomeList.push(newIncome);
 
-    // Save updated list to localStorage
-    localStorage.setItem('incomes', JSON.stringify(incomeList));
+  // Save updated list to localStorage
+  localStorage.setItem('incomes', JSON.stringify(incomeList));
 };
 
 function addExpense() {
-    const amountInput = document.querySelector('#amountCheckbook');
-    const descriptionInput = document.querySelector('#descriptionCheckbook');
-    const categorySelect = document.querySelector('select');
+  const amountInput = document.querySelector('#amountCheckbook');
+  const descriptionInput = document.querySelector('#descriptionCheckbook');
+  const categorySelect = document.querySelector('select');
 
-    const amount = amountInput.value;
-    const description = descriptionInput.value;
-    const category = categorySelect.value;
+  const amount = amountInput.value;
+  const description = descriptionInput.value;
+  const category = categorySelect.value;
 
-    const newIncome = {
-        type: 'expense',
-        amount: amount,
-        description: description,
-        category: category
-    };
+  const newIncome = {
+    type: 'expense',
+    amount: amount,
+    description: description,
+    category: category
+  };
 
 
-    const expenseList = JSON.parse(localStorage.getItem('expenses')) || [];
-    incomeList.push(newIncome);
+  const expenseList = JSON.parse(localStorage.getItem('expenses')) || [];
+  incomeList.push(newIncome);
 
-    localStorage.setItem('expenses', JSON.stringify(incomeList));
+  localStorage.setItem('expenses', JSON.stringify(incomeList));
 };
 
 addIncomeBtn.addEventListener('click', addIncome);
@@ -61,7 +61,7 @@ const expenseList = JSON.parse(localStorage.getItem('expenses')) || [];
 
 
 function generateTableRow(data) {
-    return `
+  return `
     <tr>
       <td>${data.type}</td>
       <td>${data.category}</td>
@@ -72,7 +72,7 @@ function generateTableRow(data) {
   `;
 }
 
-// Generate HTML markup for the combined table
+// Generate HTML table for the combined table
 let table = `
   <table class="table table-hover">
     <thead>
@@ -86,10 +86,10 @@ let table = `
     <tbody>
   `;
 incomeList.forEach(income => {
-    table += generateTableRow(income);
+  table += generateTableRow(income);
 });
 expenseList.forEach(expense => {
-    table += generateTableRow(expense);
+  table += generateTableRow(expense);
 });
 table += `
     </tbody>
