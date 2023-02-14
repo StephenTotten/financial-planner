@@ -17,16 +17,21 @@
 
 
 <div id="overview" class="tabcontent text-center pt-5"
-  style="background-image: url('assets/background.png');height: 1000px; background-color: #E3F3FF">
+  style="background-image: url('assets/background.png');height: 1600px; background-color: #E3F3FF">
   <h3><strong>OVERVIEW</strong></h3>
   <h4>Let your budget follow the <br><strong> 50-30-20 Rule</strong></h4>
-
-<p>
-  {{ user }}
-</p>
   <div class="container d-flex justify-content-center">
-    <div class="p-5" style="width: 500px;"><canvas id="wnChart"></canvas></div>
-    <div class="p-5" style="width: 500px;"><canvas id="myBreakdownChart"></canvas></div>
+    <div class="p-5" style="width: 600px;"><canvas id="wnChart"></canvas></div>
+    <div class="p-5" style="width: 600px;"><canvas id="myBreakdownChart"></canvas></div>
+  </div>
+
+{{!-- FOR JESS: Ideally, I'd love for the left chart to be an example and the right chart to be what we (budgetbuddy( recommend users strive for. The chart at the bottom then compares the two. If you could space out the 'lets delve deeper' and have more of a scroll towards the bottom graph, that would be ideal. Just to make it seem moreso like seperate sections--}}
+  <div class="container d-flex justify-content-center">
+    <h4>Let's delve a little deeper</h4>
+  </div>
+  
+  <div class="container d-flex justify-content-center">
+    <div class="p-5" style="width: 800px;"><canvas id="radarChartYer"></canvas></div>
   </div>
 
 </div>
@@ -38,7 +43,6 @@
   <h4>Would you like to add an income or expense?</h4>
 
   <div class="container rounded-4" id="boxes">
-
     <div class="input-group mb-3">
       <span class="input-group-text">$</span>
       <input id="amountCheckbook" type="text" class="form-control" aria-label="Amount (to the nearest dollar)"
@@ -154,12 +158,12 @@
     const WantsNeedsChart = document.getElementById('myBreakdownChart'); new Chart(WantsNeedsChart, {
     type: 'doughnut',
     data: {
-      labels: ['Needs 50%', 'Wants 30%', 'Savings 20%'],
+      labels: ['Needs', 'Wants', 'Savings'],
       datasets: [{
         label: 'Budgeting',
         data: [50, 30, 20],
-        {{!-- using categories from handle to replace above data --}}
-        backgroundColor: ['rgb(27, 154, 170)', 'rgb(239, 71, 111)', 'rgb(6, 214, 160)'],
+        {{!-- COLOR CHANGE BELOW --}}
+        backgroundColor: ['rgb(76, 201, 240)', 'rgb(247, 37, 133)', 'rgb(86, 11, 173)'],
         hoverOffset: 4
       }]
     },
@@ -169,7 +173,7 @@
         enabled: true
       },
       legend: {
-        position: 'top'
+        display: false
       },
       layout: {
         padding: {
@@ -185,12 +189,13 @@
     const exampleChart = document.getElementById('wnChart'); new Chart(exampleChart, {
     type: 'doughnut',
     data: {
-      labels: ['Entertainment', 'Food', 'Utilities', 'Rent', 'Other'],
+      labels: ['Entertainment', 'Food', 'Utilities', 'Housing', 'Savings', 'Insurance', 'Transportation', 'Other'],
       datasets: [{
         label: 'Budgeting',
-        data: [225, 300, 150, 1000, 200],
-        {{!-- using categories from handle to replace above data --}}
-        backgroundColor: ['rgb(27, 154, 170)', 'rgb(239, 71, 111)', 'rgb(6, 214, 160)', 'rgb(248, 255, 229)', 'rgb(255, 196, 61)'],
+        data: [225, 300, 150, 1000, 600, 250, 50, 200],
+        {{!-- COLOR CHANGE BELOW --}}
+        backgroundColor: ['rgb(247, 37, 133)', 'rgb(181, 23, 158)', 'rgb(114, 9, 183)', 'rgb(58, 12, 163)', 'rgb(63, 55, 201)', 'rgb(67, 97, 238)', 'rgb(72, 149, 239)'],
+        {{!-- backgroundColor2: ['rgb(27, 154, 170)', 'rgb(239, 71, 111)', 'rgb(6, 214, 160)', 'rgb(248, 255, 229)', 'rgb(255, 196, 61)',], --}}
         hoverOffset: 4
       }]
     },
@@ -200,7 +205,46 @@
         enabled: true
       },
       legend: {
-        position: 'top'
+        display: false
+      },
+      layout: {
+        padding: {
+          left: 0,
+          right: 0
+        }
+      }
+    }
+  })
+</script>
+
+<script>
+    const exRadarChart = document.getElementById('radarChartYer'); new Chart(exRadarChart, {
+    type: 'radar',
+    data: {
+      labels: ['Needs', 'Wants', 'Savings'],
+      datasets: [{
+        label: 'Example',
+        data: [59.4, 16.8, 23.8],
+        {{!-- COLOR CHANGE BELOW --}}
+        backgroundColor: ['rgb(253, 197, 245)'],
+        borderColor: ['rgb(247, 174, 248)'],
+        hoverOffset: 4
+      }, { 
+        label: 'Goal',
+        data: [50, 30, 20],
+        {{!-- COLOR CHANGE BELOW --}}
+        backgroundColor: ['rgb(114, 221, 247)'],
+        borderColor: ['rgb(128, 147, 241)'],
+        hoverOffset: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      tooltips: {
+        enabled: true
+      },
+      legend: {
+        position: 'bottom'
       },
       layout: {
         padding: {
