@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Checkbook } = require('../../models');
+const sequelize = require('../../config/connection');
 
 router.post('/', async (req, res) => {
   try {
@@ -55,6 +56,21 @@ router.post('/logout', (req, res) => {
     });
   } else {
     res.status(404).end();
+  }
+});
+
+
+router.get('/categories/:id', async (req, res)=> {
+  try {
+    const categories = await Checkbook.findAll({
+      attributes: ['category', [sequelize.fn('sum', sequelize.col('amount')), 'total_amount']],
+      where: { user_id: req.params.id },
+      group: "category"
+    });
+    res.json(categories);
+    console.log(categories);
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 

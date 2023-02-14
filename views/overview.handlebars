@@ -22,6 +22,7 @@
   <h4>Let your budget follow the <br><strong> 50-30-20 Rule</strong></h4>
 
   <div class="container d-flex justify-content-center">
+    <div class="p-5" style="width: 500px;"><canvas id="wnChart"></canvas></div>
     <div class="p-5" style="width: 500px;"><canvas id="myBreakdownChart"></canvas></div>
   </div>
 
@@ -126,18 +127,10 @@
   </div>
 </div>
 
-<div>
-  <canvas id="myChart"></canvas>
-</div>
-
-<div>
-  <canvas id="myBreakdownChart"></canvas>
-</div>
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="../public/js/overview.js"></script>
 
-<script>
+{{!-- <script>
   const ctx = document.getElementById('myBreakdownChart'); new Chart(ctx, {
     type: 'doughnut',
     data: {
@@ -145,40 +138,7 @@
       datasets: [{
         label: 'Budgeting',
         data: [50, 30, 20],
-        backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)'],
-        hoverOffset: 4
-      }]
-    },
-    options: {
-      responsive: true,
-      tooltips: {
-        enabled: true
-      },
-      legend: {
-        position: 'top'
-      },
-      layout: {
-        padding: {
-          left: 0,
-          right: 0
-        }
-      }
-    }
-  });
-
-</script>
-
-{{!--
-<script>
-  const ctx = document.getElementById('myBreakdownChart'); new Chart(ctx, {
-    type: 'radar',
-    data: {
-      labels: ['Housing', 'Insurance', 'Food', 'Savings'],
-      datasets: [{
-        label:
-          'My First Dataset',
-        data: [300, 50, 100],
-        backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)'],
+        backgroundColor: ['rgb(27, 154, 170)', 'rgb(239, 71, 111)', 'rgb(6, 214, 160)'],
         hoverOffset: 4
       }]
     },
@@ -200,6 +160,7 @@
   });
 
 </script> --}}
+{{!-- BELOW IS THE  --}}
 
 <script>
   function openPage(pageName, elmnt) {
