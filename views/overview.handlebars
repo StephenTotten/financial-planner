@@ -1,5 +1,5 @@
 <header>
-  <button type="submit" id="logOut">LOGOUT</button>
+  <button type="submit" id="logout">LOGOUT</button>
   <div class="" style="margin-top: 20px;">
     <div class="col d-flex justify-content-end"><button class="tablink nav-tabs" type="button"
         onclick="openPage('overview')" id="defaultOpen"><img src="assets/analysis.png" id="icon" />OVERVIEW</button>
@@ -38,10 +38,12 @@
 
     <div class="input-group mb-3">
       <span class="input-group-text">$</span>
-      <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Amount" />
+      <input id="amountCheckbook" type="text" class="form-control" aria-label="Amount (to the nearest dollar)"
+        placeholder="Amount" />
     </div>
 
-    <input type="text" class="form-control mb-3" aria-label="Description" placeholder="Description" />
+    <input id="descriptionCheckbook" type="text" class="form-control mb-3" aria-label="Description"
+      placeholder="Description" />
 
     <select class="form-select mb-3" aria-label="Default select example">
       <option selected>Select a Category</option>
@@ -52,10 +54,12 @@
     </select>
 
     <div>
-      <button class="btn btn-danger mt-4 me-4">Add Income</button>
-      <button class="btn btn-danger mt-4 ms-4">Add Expense</button>
+      <button class="btn btn-danger mt-4 me-4" id="addIncome">ADD INCOME</button>
+      <button class="btn btn-danger mt-4 ms-4" id="addExpense">ADD EXPENSE</button>
     </div>
 
+  </div>
+  <div class="container rounded-4 table-container" id="boxes2">
   </div>
 
 </div>
@@ -124,6 +128,7 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../public/js/overview.js"></script>
 
 {{!-- <script>
   const ctx = document.getElementById('myBreakdownChart'); new Chart(ctx, {
