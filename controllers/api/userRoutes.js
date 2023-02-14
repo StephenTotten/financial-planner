@@ -68,6 +68,8 @@ router.get('/categories/:id', async (req, res)=> {
       group: "category"
     });
     res.json(categories);
+    // serialize categories (map and get)
+    // call a req.session.save & save the array to session (cat = cat)
     console.log(categories);
   } catch (err) {
     res.status(500).json(err);

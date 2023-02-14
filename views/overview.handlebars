@@ -21,6 +21,9 @@
   <h3><strong>OVERVIEW</strong></h3>
   <h4>Let your budget follow the <br><strong> 50-30-20 Rule</strong></h4>
 
+<p>
+  {{ user }}
+</p>
   <div class="container d-flex justify-content-center">
     <div class="p-5" style="width: 500px;"><canvas id="wnChart"></canvas></div>
     <div class="p-5" style="width: 500px;"><canvas id="myBreakdownChart"></canvas></div>
@@ -130,14 +133,32 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="../public/js/overview.js"></script>
 
-{{!-- <script>
-  const ctx = document.getElementById('myBreakdownChart'); new Chart(ctx, {
+
+
+<script>
+  function openPage(pageName, elmnt) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+
+    } document.getElementById(pageName).style.display = "block";
+  } // Get the element with id = "defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+</script>
+
+<script>
+    const WantsNeedsChart = document.getElementById('myBreakdownChart'); new Chart(WantsNeedsChart, {
     type: 'doughnut',
     data: {
       labels: ['Needs 50%', 'Wants 30%', 'Savings 20%'],
       datasets: [{
         label: 'Budgeting',
         data: [50, 30, 20],
+        {{!-- using categories from handle to replace above data --}}
         backgroundColor: ['rgb(27, 154, 170)', 'rgb(239, 71, 111)', 'rgb(6, 214, 160)'],
         hoverOffset: 4
       }]
@@ -157,24 +178,36 @@
         }
       }
     }
-  });
-
-</script> --}}
-{{!-- BELOW IS THE  --}}
-
-<script>
-  function openPage(pageName, elmnt) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
-
-    } document.getElementById(pageName).style.display = "block";
-  } // Get the element with id = "defaultOpen" and click on it
-  document.getElementById("defaultOpen").click();
+  })
 </script>
 
-<script type="module" src="/js/bigcharts.js"></script>
+<script>
+    const exampleChart = document.getElementById('wnChart'); new Chart(exampleChart, {
+    type: 'doughnut',
+    data: {
+      labels: ['Entertainment', 'Food', 'Utilities', 'Rent', 'Other'],
+      datasets: [{
+        label: 'Budgeting',
+        data: [225, 300, 150, 1000, 200],
+        {{!-- using categories from handle to replace above data --}}
+        backgroundColor: ['rgb(27, 154, 170)', 'rgb(239, 71, 111)', 'rgb(6, 214, 160)', 'rgb(248, 255, 229)', 'rgb(255, 196, 61)'],
+        hoverOffset: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      tooltips: {
+        enabled: true
+      },
+      legend: {
+        position: 'top'
+      },
+      layout: {
+        padding: {
+          left: 0,
+          right: 0
+        }
+      }
+    }
+  })
+</script>
