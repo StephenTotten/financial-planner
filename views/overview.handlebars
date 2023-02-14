@@ -17,17 +17,11 @@
 
 <div id="overview" class="tabcontent text-center pt-5"
   style="background-image: url('assets/background.png');height: 1000px; background-color: #E3F3FF">
+  <h3><strong>OVERVIEW</strong></h3>
+  <h4>Let your budget follow the <br><strong> 50-30-20 Rule</strong></h4>
 
-  <h3>OVERVIEW</h3>
-  <h4>Let's see your numbers</h4>
-
-  {{! div for chart.js }}
-  <div>
-    {{! placeholder for doughnut chart }}
-    <div style="width: 800px;"><canvas id="doughnut-chart"></canvas></div>
-    {{! placeholder for radar chart }}
-    <div style="width: 800px;"><canvas id="radar-chart"></canvas></div>
-
+  <div class="container d-flex justify-content-center">
+    <div class="p-5" style="width: 500px;"><canvas id="myBreakdownChart"></canvas></div>
   </div>
 
 </div>
@@ -35,7 +29,7 @@
 <div id="checkbook" class="tabcontent text-center pt-5"
   style="background-image: url('assets/background.png');height: 1000px; background-color: #E3F3FF">
 
-  <h3>CHECKBOOK</h3>
+  <h3><strong>CHECKBOOK</strong></h3>
   <h4>Would you like to add an income or expense?</h4>
 
   <div class="container rounded-4" id="boxes">
@@ -66,7 +60,7 @@
 
 <div id="goals" class="tabcontent text-center pt-5"
   style="background-image: url('assets/background.png');height: 1000px; background-color: #E3F3FF">
-  <h3>GOALS</h3>
+  <h3><strong>GOALS</strong></h3>
   <h4>Set some goals!</h4>
 
   <div class="row">
@@ -141,7 +135,7 @@
   const ctx = document.getElementById('myBreakdownChart'); new Chart(ctx, {
     type: 'doughnut',
     data: {
-      labels: ['Needs', 'Wants', 'Savings'],
+      labels: ['Needs 50%', 'Wants 30%', 'Savings 20%'],
       datasets: [{
         label: 'Budgeting',
         data: [50, 30, 20],
@@ -149,7 +143,7 @@
         hoverOffset: 4
       }]
     },
-        options: {
+    options: {
       responsive: true,
       tooltips: {
         enabled: true
@@ -168,7 +162,8 @@
 
 </script>
 
-{{!-- <script>
+{{!--
+<script>
   const ctx = document.getElementById('myBreakdownChart'); new Chart(ctx, {
     type: 'radar',
     data: {
@@ -202,14 +197,15 @@
 
 <script>
   function openPage(pageName, elmnt) {
-    var i, tabcontent, tablinks; 
-    tabcontent = document.getElementsByClassName("tabcontent"); 
-    for (i = 0; i < tabcontent.length; i++) { 
-      tabcontent[i].style.display = "none"; } 
-      tablinks = document.getElementsByClassName("tablink"); 
-      for (i = 0; i < tablinks.length; i++) { 
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
 
-      } document.getElementById(pageName).style.display = "block";
+    } document.getElementById(pageName).style.display = "block";
   } // Get the element with id = "defaultOpen" and click on it
   document.getElementById("defaultOpen").click();
 </script>
