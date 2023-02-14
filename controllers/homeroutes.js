@@ -49,6 +49,7 @@ router.get('/goal/:id', async (req, res) => {
   }
 });
 
+
 // Use withAuth middleware to prevent access to route MAY NEED TO CHANGE /PROFILE PATH
 router.get('/overview', withAuth, async (req, res) => {
   try {
