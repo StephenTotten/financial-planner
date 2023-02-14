@@ -68,6 +68,7 @@ router.get('/categories/:id', async (req, res)=> {
       group: "category"
     });
     res.json(categories);
+    console.log(categories);
   } catch (err) {
     res.status(500).json(err);
   }
