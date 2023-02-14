@@ -1,6 +1,6 @@
 <header>
   <div class="" style="margin-top: 20px;">
-    <div class="col d-flex justify-content-end "><button class="tablink nav-tabs" type="button"
+    <div class="col d-flex justify-content-end"><button class="tablink nav-tabs" type="button"
         onclick="openPage('overview')" id="defaultOpen"><img src="assets/analysis.png" id="icon" />OVERVIEW</button>
 
       <button class="tablink nav-tabs" type="button" onclick="openPage('checkbook')"><img src="assets/accounts.png"
@@ -10,22 +10,19 @@
           id="icon" />GOALS</button>
     </div>
     <hr style="margin: auto;margin-top: -4px;
-            border: 2px solid #FFC43D;">
+            border: 2px solid #FFC43D;" />
   </div>
 </header>
-
-
-
 
 <div id="overview" class="tabcontent text-center pt-5">
   <h3>OVERVIEW</h3>
   <h4>Let's see your numbers</h4>
 
-  {{!-- div for chart.js --}}
+  {{! div for chart.js }}
   <div>
-    {{!-- placeholder for doughnut chart --}}
+    {{! placeholder for doughnut chart }}
     <div style="width: 800px;"><canvas id="doughnut-chart"></canvas></div>
-    {{!-- placeholder for radar chart --}}
+    {{! placeholder for radar chart }}
     <div style="width: 800px;"><canvas id="radar-chart"></canvas></div>
 
   </div>
@@ -39,12 +36,12 @@
 
   <div class="container rounded-4" id="boxes">
 
-    <div class=" input-group mb-3">
+    <div class="input-group mb-3">
       <span class="input-group-text">$</span>
-      <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Amount">
+      <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Amount" />
     </div>
 
-    <input type="text" class=" form-control mb-3" aria-label="Description" placeholder="Description">
+    <input type="text" class="form-control mb-3" aria-label="Description" placeholder="Description" />
 
     <select class="form-select mb-3" aria-label="Default select example">
       <option selected>Select a Category</option>
@@ -55,7 +52,7 @@
     </select>
 
     <div>
-      <button class="btn btn-danger mt-4 me-4 ">Add Income</button>
+      <button class="btn btn-danger mt-4 me-4">Add Income</button>
       <button class="btn btn-danger mt-4 ms-4">Add Expense</button>
     </div>
 
@@ -70,15 +67,15 @@
   <div class="row">
     <div class="container rounded-4" id="boxes">
 
-      <input type="text" class=" form-control mb-3" aria-label="Add goal" placeholder="Add your goal">
+      <input type="text" class="form-control mb-3" aria-label="Add goal" placeholder="Add your goal" />
 
-      <div class=" input-group mb-3">
+      <div class="input-group mb-3">
         <span class="input-group-text">$</span>
-        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Amount">
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Amount" />
       </div>
 
       <div>
-        <button class="btn btn-danger mt-4 ">Add Goal</button>
+        <button class="btn btn-danger mt-4">Add Goal</button>
       </div>
 
     </div>
@@ -97,13 +94,14 @@
 
         <div class="input-group mb-3">
           <span class="input-group-text">$</span>
-          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="New Amount">
+          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)"
+            placeholder="New Amount" />
         </div>
 
         <div>
           <button class="btn mt-4" id="updateBtn" style="
                         background-color: #06D6A0; color: white;">Update Goal</button>
-          <button class="btn btn-danger mt-4 " id="deleteBtn">Delete Goal</button>
+          <button class="btn btn-danger mt-4" id="deleteBtn">Delete Goal</button>
         </div>
 
       </div>
@@ -113,10 +111,10 @@
       <div class="container rounded-4 align-middle" id="boxes2">
 
         <h5 class="">Example of goal</h5>
-        <br>
+        <br />
         <p>Example of amount left</p>
         <div>
-          <img id="icon2" src="accounts.png">
+          <img id="icon2" src="./assets/accounts.png" />
         </div>
 
       </div>
@@ -124,23 +122,91 @@
   </div>
 </div>
 
+<div>
+  <canvas id="myChart"></canvas>
+</div>
+
+<div>
+  <canvas id="myBreakdownChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('myBreakdownChart'); new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Needs', 'Wants', 'Savings'],
+      datasets: [{
+        label: 'Budgeting',
+        data: [50, 30, 20],
+        backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)'],
+        hoverOffset: 4
+      }]
+    },
+        options: {
+      responsive: true,
+      tooltips: {
+        enabled: true
+      },
+      legend: {
+        position: 'top'
+      },
+      layout: {
+        padding: {
+          left: 0,
+          right: 0
+        }
+      }
+    }
+  });
+
+</script>
+
+{{!-- <script>
+  const ctx = document.getElementById('myBreakdownChart'); new Chart(ctx, {
+    type: 'radar',
+    data: {
+      labels: ['Housing', 'Insurance', 'Food', 'Savings'],
+      datasets: [{
+        label:
+          'My First Dataset',
+        data: [300, 50, 100],
+        backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)'],
+        hoverOffset: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      tooltips: {
+        enabled: true
+      },
+      legend: {
+        position: 'top'
+      },
+      layout: {
+        padding: {
+          left: 0,
+          right: 0
+        }
+      }
+    }
+  });
+
+</script> --}}
+
 <script>
   function openPage(pageName, elmnt) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
+    var i, tabcontent, tablinks; 
+    tabcontent = document.getElementsByClassName("tabcontent"); 
+    for (i = 0; i < tabcontent.length; i++) { 
+      tabcontent[i].style.display = "none"; } 
+      tablinks = document.getElementsByClassName("tablink"); 
+      for (i = 0; i < tablinks.length; i++) { 
 
-    }
-    document.getElementById(pageName).style.display = "block";
-
-  }
-
-  // Get the element with id="defaultOpen" and click on it
+      } document.getElementById(pageName).style.display = "block";
+  } // Get the element with id = "defaultOpen" and click on it
   document.getElementById("defaultOpen").click();
 </script>
 
-<script type="module" src="/js/bigchart.js"></script>
+<script type="module" src="/js/bigcharts.js"></script>
