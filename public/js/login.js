@@ -32,8 +32,8 @@ const loginFormHandler = async (event) => {
   const signupFormHandler = async (event) => {
     event.preventDefault();
   
-    const email = document.getElementById('.email-signup').value.trim();
-    const password = document.getElementById('.password-signup').value.trim();
+    const email = document.getElementById('email-signup').value.trim();
+    const password = document.getElementById('password-signup').value.trim();
   
     if (email && password) {
       const response = await fetch('/api/users', {
