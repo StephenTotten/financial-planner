@@ -9,6 +9,21 @@
     font-family: Tahoma, Helvetica, Arial, sans-serif;
 }
 
+#logOut {
+    position: absolute;
+    left: 10px;
+    top: 25px;
+    border: none;
+    background-color: white;
+    padding: 5px 0px 5px 0px;
+    color: var(--pink);
+}
+
+#logOut:hover {
+    background-color: var(--pink);
+    color: white;
+}
+
 #boxes {
     box-shadow: 5px 5px 18px lightgrey;
     width: 50%;
