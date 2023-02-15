@@ -2,13 +2,14 @@
     "name": "financial-planner",
     "version": "1.0.0",
     "description": "Allows users to save and ",
+    "engines": {
+        "node": "16.18.0"
+    },
     "main": "server.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "node server.js",
-        "seed": "node seeds/seed.js",
-        "dev": "parcel src/index.html",
-        "build": "parcel build src/index.html"
+        "seed": "node seeds/seed.js"
     },
     "keywords": [],
     "author": "",

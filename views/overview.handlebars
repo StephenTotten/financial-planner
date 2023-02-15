@@ -1,5 +1,5 @@
 <header>
-  <button type="submit" id="logout">LOGOUT</button>
+  <button id="logout">LOGOUT</button>
   <div class="" style="margin-top: 20px;">
     <div class="col d-flex justify-content-end"><button class="tablink nav-tabs" type="button"
         onclick="openPage('overview')" id="defaultOpen"><img src="assets/analysis.png" id="icon" />OVERVIEW</button>
@@ -110,15 +110,15 @@
   <div class="row">
     <div class="container rounded-4" id="boxes">
 
-      <input type="text" class="form-control mb-3" aria-label="Add goal" placeholder="Add your goal" />
+      <input  id="descriptionGoal" type="text" class="form-control mb-3" aria-label="Add goal" placeholder="Add your goal" />
 
       <div class="input-group mb-3">
         <span class="input-group-text">$</span>
-        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Amount" />
+        <input id="amountGoal" type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Amount" />
       </div>
 
       <div>
-        <button class="btn btn-danger mt-4">Add Goal</button>
+        <button class="btn btn-danger mt-4" id="goalbtn">Add Goal</button>
       </div>
 
     </div>
@@ -157,6 +157,7 @@
         <br />
         <p class="col-9">Still 400 to go!</p>
         <img class="col-3" src="./assets/happyicon.png">
+
 
       </div>
     </div>

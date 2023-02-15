@@ -24,10 +24,6 @@ Goal.init(
       type: DataTypes.FLOAT,
       allowNull: false,
     },
-    current_funding: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
-    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
