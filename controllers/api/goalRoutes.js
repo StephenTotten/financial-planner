@@ -58,4 +58,19 @@ router.delete('/:id', withAuth, async (req, res) => {
     }
   });
   
+// Get all goals
+router.get('/', withAuth, async (req, res) => {
+  try {
+    const newGoal = await Goal.findAll({
+      where: {
+        user_id: req.session.user_id,
+      }
+
+    });
+
+    res.status(200).json(newGoal);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
 module.exports = router;
