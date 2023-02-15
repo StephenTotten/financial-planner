@@ -2,6 +2,9 @@
     "name": "financial-planner",
     "version": "1.0.0",
     "description": "Allows users to save and ",
+    "engines": {
+        "node": "16.18.0"
+    },
     "main": "server.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
