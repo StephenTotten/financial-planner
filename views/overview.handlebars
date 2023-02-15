@@ -25,11 +25,14 @@
     <div class="p-5" style="width: 600px;"><canvas id="myBreakdownChart"></canvas></div>
   </div>
 
-{{!-- FOR JESS: Ideally, I'd love for the left chart to be an example and the right chart to be what we (budgetbuddy( recommend users strive for. The chart at the bottom then compares the two. If you could space out the 'lets delve deeper' and have more of a scroll towards the bottom graph, that would be ideal. Just to make it seem moreso like seperate sections--}}
+  {{!-- FOR JESS: Ideally, I'd love for the left chart to be an example and the right chart to be what we (budgetbuddy(
+  recommend users strive for. The chart at the bottom then compares the two. If you could space out the 'lets delve
+  deeper' and have more of a scroll towards the bottom graph, that would be ideal. Just to make it seem moreso like
+  seperate sections--}}
   <div class="container d-flex justify-content-center">
     <h4>Let's delve a little deeper</h4>
   </div>
-  
+
   <div class="container d-flex justify-content-center">
     <div class="p-5" style="width: 800px;"><canvas id="radarChartYer"></canvas></div>
   </div>
@@ -42,15 +45,15 @@
   <h3><strong>CHECKBOOK</strong></h3>
   <h4>Would you like to add an income or expense?</h4>
 
-  <div class="container rounded-4" id="boxes">
+  <form class="container rounded-4" id="checkbookForm">
     <div class="input-group mb-3">
       <span class="input-group-text">$</span>
       <input id="amountCheckbook" type="text" class="form-control" aria-label="Amount (to the nearest dollar)"
-        placeholder="Amount" />
+        placeholder="Amount" name="amount" />
     </div>
 
     <input id="descriptionCheckbook" type="text" class="form-control mb-3" aria-label="Description"
-      placeholder="Description" />
+      placeholder="Description" name="description" />
 
     <select class="form-select mb-3" aria-label="Default select example">
       <option selected>Select a Category</option>
@@ -61,12 +64,35 @@
     </select>
 
     <div>
-      <button class="btn btn-danger mt-4 me-4" id="addIncome">ADD INCOME</button>
-      <button class="btn btn-danger mt-4 ms-4" id="addExpense">ADD EXPENSE</button>
+      {{!-- <button type='submit' value='Submit' class="btn btn-danger mt-4 me-4" id="addIncome">ADD INCOME</button>
+      --}}
+      <button type='submit' value='Submit' class="btn btn-danger mt-4 ms-4" id="addExpense">ADD EXPENSE</button>
     </div>
 
-  </div>
+  </form>
   <div class="container rounded-4 table-container" id="boxes2">
+
+    <form class="container rounded-4 table-container" id="checkbookForm">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Type</th>
+            <th scope="col">Category</th>
+            <th scope="col">Description</th>
+            <th scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          {{!-- {{#each checkbook}} --}}
+          {{!-- <td>{{this.is_withdrawal}}</td> --}}
+          {{!-- <td>{{checkbook.category}}</td>
+          <td>{{checkbook.description}}</td>
+          <td>{{checkbook.amount}}</td> --}}
+          {{!-- {{/each}} --}}
+        </tbody>
+      </table>
+    </form>
   </div>
 
 </div>
@@ -134,10 +160,10 @@
   </div>
 </div>
 
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="js/overview.js"></script>
 <script src="js/logout.js"></script>
-
 
 
 <script>
@@ -156,14 +182,14 @@
 </script>
 
 <script>
-    const WantsNeedsChart = document.getElementById('myBreakdownChart'); new Chart(WantsNeedsChart, {
+  const WantsNeedsChart = document.getElementById('myBreakdownChart'); new Chart(WantsNeedsChart, {
     type: 'doughnut',
     data: {
       labels: ['Needs', 'Wants', 'Savings'],
       datasets: [{
         label: 'Budgeting',
         data: [50, 30, 20],
-        {{!-- COLOR CHANGE BELOW --}}
+
         backgroundColor: ['rgb(76, 201, 240)', 'rgb(247, 37, 133)', 'rgb(86, 11, 173)'],
         hoverOffset: 4
       }]
@@ -187,16 +213,16 @@
 </script>
 
 <script>
-    const exampleChart = document.getElementById('wnChart'); new Chart(exampleChart, {
+  const exampleChart = document.getElementById('wnChart'); new Chart(exampleChart, {
     type: 'doughnut',
     data: {
       labels: ['Entertainment', 'Food', 'Utilities', 'Housing', 'Savings', 'Insurance', 'Transportation', 'Other'],
       datasets: [{
         label: 'Budgeting',
         data: [225, 300, 150, 1000, 600, 250, 50, 200],
-        {{!-- COLOR CHANGE BELOW --}}
+
         backgroundColor: ['rgb(247, 37, 133)', 'rgb(181, 23, 158)', 'rgb(114, 9, 183)', 'rgb(58, 12, 163)', 'rgb(63, 55, 201)', 'rgb(67, 97, 238)', 'rgb(72, 149, 239)'],
-        {{!-- backgroundColor2: ['rgb(27, 154, 170)', 'rgb(239, 71, 111)', 'rgb(6, 214, 160)', 'rgb(248, 255, 229)', 'rgb(255, 196, 61)',], --}}
+        backgroundColor2: ['rgb(27, 154, 170)', 'rgb(239, 71, 111)', 'rgb(6, 214, 160)', 'rgb(248, 255, 229)', 'rgb(255, 196, 61)',],
         hoverOffset: 4
       }]
     },
@@ -219,21 +245,21 @@
 </script>
 
 <script>
-    const exRadarChart = document.getElementById('radarChartYer'); new Chart(exRadarChart, {
+  const exRadarChart = document.getElementById('radarChartYer'); new Chart(exRadarChart, {
     type: 'radar',
     data: {
       labels: ['Needs', 'Wants', 'Savings'],
       datasets: [{
         label: 'Example',
         data: [59.4, 16.8, 23.8],
-        {{!-- COLOR CHANGE BELOW --}}
+
         backgroundColor: ['rgb(253, 197, 245)'],
         borderColor: ['rgb(247, 174, 248)'],
         hoverOffset: 4
-      }, { 
+      }, {
         label: 'Goal',
         data: [50, 30, 20],
-        {{!-- COLOR CHANGE BELOW --}}
+
         backgroundColor: ['rgb(114, 221, 247)'],
         borderColor: ['rgb(128, 147, 241)'],
         hoverOffset: 4
@@ -254,5 +280,5 @@
         }
       }
     }
-  })
+  });
 </script>

@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Checkbook extends Model {}
+class Checkbook extends Model { }
 
 Checkbook.init(
   {
@@ -24,10 +24,10 @@ Checkbook.init(
       type: DataTypes.FLOAT,
       allowNull: false,
     },
-    is_withdrawal: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
+    // is_withdrawal: {
+    //   type: DataTypes.BOOLEAN,
+    //   allowNull: false,
+    // },
     category: {
       type: DataTypes.STRING,
       allowNull: false,
