@@ -1,4 +1,3 @@
-// BELOW IS PLACEHOLDER, STILL NEED TO EDIT
 const logout = async () => {
   const response = await fetch('/api/users/logout', {
     method: 'POST',
