@@ -9,22 +9,25 @@
     font-family: Tahoma, Helvetica, Arial, sans-serif;
 }
 
-#logOut {
+#logout {
     position: absolute;
     left: 10px;
     top: 25px;
     border: none;
+    border-radius: 5px;
     background-color: white;
-    padding: 5px 0px 5px 0px;
+    padding: 8px;
     color: var(--pink);
+    margin-bottom: 2px;
 }
 
-#logOut:hover {
+#logout:hover {
     background-color: var(--pink);
     color: white;
 }
 
-#boxes {
+#boxes,
+.box {
     box-shadow: 5px 5px 18px lightgrey;
     width: 50%;
     margin-top: 50px;
@@ -41,10 +44,7 @@
     background-color: white;
 }
 
-.green-btn {
-    background-color: var(--green) !important;
-    color: white !important;
-}
+
 
 #icon2 {
     width: 50px;

@@ -17,24 +17,36 @@
 
 
 <div id="overview" class="tabcontent text-center pt-5"
-  style="background-image: url('assets/background.png');height: 1600px; background-color: #E3F3FF">
+  style="background-image: url('assets/background.png');height: 1700px; background-color: #E3F3FF">
   <h3><strong>OVERVIEW</strong></h3>
-  <h4>Let your budget follow the <br><strong> 50-30-20 Rule</strong></h4>
+  <h4>Let's look at your numbers!</h4>
   <div class="container d-flex justify-content-center">
-    <div class="p-5" style="width: 600px;"><canvas id="wnChart"></canvas></div>
-    <div class="p-5" style="width: 600px;"><canvas id="myBreakdownChart"></canvas></div>
+
+
+    <div class="p-5" style="width: 500px;">
+      <h5>Budget Buddy recommends you strive for<br><strong> The 50-30-20 Rule</strong></h5>
+      <canvas id="myBreakdownChart"></canvas>
+      <p class="p-4">Your monthly budget divided: <br> 50% in needs, 30% in wants, and 20% in savings</p>
+    </div>
+
+    <div class="p-4 mt-3" style="width: 500px;">
+      <h5 class="">Your monthly budget divided by categories</h5>
+      <canvas id="wnChart"></canvas>
+    </div>
   </div>
 
-  {{!-- FOR JESS: Ideally, I'd love for the left chart to be an example and the right chart to be what we (budgetbuddy(
-  recommend users strive for. The chart at the bottom then compares the two. If you could space out the 'lets delve
+  {{!-- FOR JESS: The chart at the bottom then compares the two. If you could space out the 'lets delve
   deeper' and have more of a scroll towards the bottom graph, that would be ideal. Just to make it seem moreso like
   seperate sections--}}
-  <div class="container d-flex justify-content-center">
-    <h4>Let's delve a little deeper</h4>
+  <div class="container d-flex justify-content-center m-2">
+
   </div>
 
   <div class="container d-flex justify-content-center">
-    <div class="p-5" style="width: 800px;"><canvas id="radarChartYer"></canvas></div>
+    <div class="p-4" style="width: 800px">
+      <h5>Let's compare<br><strong>Your budget vs The 50-30-20 rule</strong></h5>
+      <canvas id="radarChartYer"></canvas>
+    </div>
   </div>
 
 </div>
@@ -45,8 +57,8 @@
   <h3><strong>CHECKBOOK</strong></h3>
   <h4>Would you like to add an income or expense?</h4>
 
-  <form class="container rounded-4" id="checkbookForm">
-    <div class="input-group mb-3">
+  <form class="container rounded-4 p-5 box" style="width: 40%;" id="checkbookForm">
+    <div class="input-group  mb-3">
       <span class="input-group-text">$</span>
       <input id="amountCheckbook" type="text" class="form-control" aria-label="Amount (to the nearest dollar)"
         placeholder="Amount" name="amount" />
@@ -209,13 +221,13 @@
   const exampleChart = document.getElementById('wnChart'); new Chart(exampleChart, {
     type: 'doughnut',
     data: {
-      labels: ['Entertainment', 'Food', 'Utilities', 'Housing', 'Savings', 'Insurance', 'Transportation', 'Other'],
+      labels: ['Entertainment', 'Insurance', 'Transportation', 'Food', 'Utilities', 'Housing', 'Savings', 'Other'],
       datasets: [{
         label: 'Budgeting',
-        data: [225, 300, 150, 1000, 600, 250, 50, 200],
+        data: [700, 300, 150, 300, 600, 1000, 500, 50],
 
-        backgroundColor: ['rgb(247, 37, 133)', 'rgb(181, 23, 158)', 'rgb(114, 9, 183)', 'rgb(58, 12, 163)', 'rgb(63, 55, 201)', 'rgb(67, 97, 238)', 'rgb(72, 149, 239)'],
-        backgroundColor2: ['rgb(27, 154, 170)', 'rgb(239, 71, 111)', 'rgb(6, 214, 160)', 'rgb(248, 255, 229)', 'rgb(255, 196, 61)',],
+        backgroundColor: ['rgb(247, 37, 133)', 'rgb(76, 201, 240)', 'rgb(76, 201, 240)', 'rgb(76, 201, 240)', 'rgb(76, 201, 240)', 'rgb(76, 201, 240)', 'rgb(86, 11, 173)', '#FFC43D'],
+
         hoverOffset: 4
       }]
     },
@@ -243,18 +255,18 @@
     data: {
       labels: ['Needs', 'Wants', 'Savings'],
       datasets: [{
-        label: 'Example',
+        label: 'Your Budget',
         data: [59.4, 16.8, 23.8],
 
-        backgroundColor: ['rgb(253, 197, 245)'],
-        borderColor: ['rgb(247, 174, 248)'],
+        backgroundColor: ['#EF476F'],
+        borderColor: ['#ffffff'],
         hoverOffset: 4
       }, {
         label: 'Goal',
         data: [50, 30, 20],
 
-        backgroundColor: ['rgb(114, 221, 247)'],
-        borderColor: ['rgb(128, 147, 241)'],
+        backgroundColor: ['#FFC43D'],
+        borderColor: ['#ffffff'],
         hoverOffset: 4
       }]
     },

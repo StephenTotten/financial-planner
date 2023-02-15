@@ -7,10 +7,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 function createCells(cells) {
-  return `<td></td>
-  <td>${cells.category}</td>
+  return `<td>${cells.category}</td>
   <td>${cells.description}</td>
-  <td>${cells.amount}</td>
+  <td>$ ${cells.amount}</td>
   `;
 };
 
