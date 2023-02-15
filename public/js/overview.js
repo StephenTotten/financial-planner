@@ -1,4 +1,6 @@
 const tbody = document.querySelector('#checkbookForm table tbody');
+const tbody2 = document.querySelector('#goalForm');
+
 document.addEventListener('DOMContentLoaded', async () => {
   const response = await fetch('/api/checkbook');
   const data = await response.json();
@@ -7,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 function createCells(cells) {
-  return `<td></td>
+  return `
   <td>${cells.category}</td>
   <td>${cells.description}</td>
   <td>${cells.amount}</td>
@@ -45,3 +47,32 @@ async function newFormInput(event) {
 }
 
 document.querySelector('#checkbookForm').addEventListener('submit', newFormInput);
+
+async function goalFormInput(event) {
+  event.preventDefault();
+
+  const gamount = document.querySelector('#amountGoal').value;
+  const goalDesc = document.querySelector('#descriptionGoal').value;
+
+  const response = await fetch(`/api/goals`, {
+    method: 'POST',
+    body: JSON.stringify({
+      'name': goalDesc,
+      'needed_funding': +gamount,
+    }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
+  if (response.ok) {
+    const item = await response.json();
+    console.log(item);
+    const html = `${item}`;
+    tbody2.innerHTML += html;
+
+  } else {
+    alert('Failed to add goal input');
+  }
+}
+document.querySelector('#goalbtn').addEventListener('click', goalFormInput);
