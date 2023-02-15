@@ -73,33 +73,4 @@ router.delete('/:id', withAuth, async (req, res) => {
   }
 });
 
-// trying this....
-// router.post('/', withAuth, async (req, res) => {
-//   try {
-//     const newCheckbook = await Checkbook.create({
-//       is_withdrawal: req.body.is_withdrawal,
-//       category: req.body.category,
-//       description: req.body.description,
-//       amount: req.body.amount,
-//       date_created: req.body.date_created,
-//       user_id: req.session.user_id,
-//     });
-
-//     res.status(200).json(newCheckbook);
-//   } catch (err) {
-//     res.status(400).json(err);
-//   }
-// });
-
-
-// router.get('/', (req, res) => {
-//   res.render('overview', { title: 'Checkbook input' });
-// });
-
-// router.get('/', async (req, res) => {
-//   const checkbooks = await Checkbook.findAll({ where: { user_id: req.session.user_id } });
-//   res.render('overview', { title: 'Checkbook input', checkbooks });
-// });
-
-
 module.exports = router;

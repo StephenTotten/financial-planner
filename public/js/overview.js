@@ -12,7 +12,7 @@ function createCells(cells) {
   return `
   <td>${cells.category}</td>
   <td>${cells.description}</td>
-  <td>${cells.amount}</td>
+  <td>$ ${cells.amount}</td>
   `;
 };
 
